@@ -1,49 +1,49 @@
 {
-    "editor.snippetSuggestions": "top",
-    "editor.lightbulb.enabled": true,
-    "editor.cursorSmoothCaretAnimation": true,
-    "editor.formatOnPaste": true,
-    "typescript.preferences.quoteStyle": "single",
-    "javascript.preferences.quoteStyle": "single",
-    "editor.autoClosingQuotes": "never",
-    "markdown.styles": [
-        "https://rawgit.com/easyaspi314/vscode-macOS/master/markdown.css"
-    ],
-    "workbench.editor.tabSizing": "shrink",
-    "emmet.showSuggestionsAsSnippets": true,
-    "editor.trimAutoWhitespace": false,
-    "diffEditor.ignoreTrimWhitespace": false,
-    "beautify.ignore": ["**/**.js", "**/**.ts", "**/**.scss"],
-    "beautify.config": {
-        "indent_size": 4,
-        "css": {
-            "newline_between_rules": true,
-            "space_around_combinator": true,
-            "selector_separator_newline": true
-        },
-        "html": {
-            "wrap_attributes": "force-aligned"
-        }
+  "editor.snippetSuggestions": "top",
+  "editor.lightbulb.enabled": true,
+  "editor.cursorSmoothCaretAnimation": true,
+  "editor.formatOnPaste": true,
+  "typescript.preferences.quoteStyle": "single",
+  "javascript.preferences.quoteStyle": "single",
+  "editor.autoClosingQuotes": "never",
+  "markdown.styles": [
+    "https://rawgit.com/easyaspi314/vscode-macOS/master/markdown.css"
+  ],
+  "workbench.editor.tabSizing": "shrink",
+  "emmet.showSuggestionsAsSnippets": true,
+  "editor.trimAutoWhitespace": false,
+  "diffEditor.ignoreTrimWhitespace": false,
+  "beautify.ignore": ["**/**.js", "**/**.ts", "**/**.scss"],
+  "beautify.config": {
+    "indent_size": 4,
+    "css": {
+      "newline_between_rules": true,
+      "space_around_combinator": true,
+      "selector_separator_newline": true
     },
-    "prettier.singleQuote": true,
-    "prettier.tabWidth": 4,
-    "prettier.trailingComma": "none",
-    "prettier.arrowParens": "avoid",
-    "prettier.printWidth": 70,
-    "prettier.htmlWhitespaceSensitivity": "ignore",
-    "editor.formatOnSave": true,
-    "editor.formatOnType": true,
-    "editor.wordWrap": "on",
-    "editor.minimap.enabled": true,
-    "editor.codeActionsOnSave": {
-        "source.organizeImports": true,
-        "source.fixAll.eslint": true
-    },
-    "git.enableSmartCommit": true,
-    "git.confirmSync": false,
-    "git.autofetch": true,
-    "typescript.updateImportsOnFileMove.enabled": "always",
-    "git.ignoreLimitWarning": true,
-    "workbench.colorCustomizations": {},
-    "cSpell.words": ["Dont", "Rclient"]
+    "html": {
+      "wrap_attributes": "force-aligned"
+    }
+  },
+  "prettier.singleQuote": true,
+  "prettier.tabWidth": 4,
+  "prettier.trailingComma": "none",
+  "prettier.arrowParens": "avoid",
+  "prettier.printWidth": 70,
+  "prettier.htmlWhitespaceSensitivity": "ignore",
+  "editor.formatOnSave": true,
+  "editor.formatOnType": true,
+  "editor.wordWrap": "on",
+  "editor.minimap.enabled": true,
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": true,
+    "source.fixAll.eslint": true
+  },
+  "git.enableSmartCommit": true,
+  "git.confirmSync": false,
+  "git.autofetch": true,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "git.ignoreLimitWarning": true,
+  "workbench.colorCustomizations": {},
+  "cSpell.words": ["APOD", "Dont", "Rclient"]
 }
