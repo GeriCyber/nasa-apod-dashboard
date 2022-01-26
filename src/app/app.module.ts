@@ -8,6 +8,7 @@ import { NbThemeModule, NbLayoutModule, NbCardModule } from '@nebular/theme';
 import { NbEvaIconsModule } from '@nebular/eva-icons';
 import { DashboardComponent, DetailComponent } from './pages';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     BrowserModule,
     AppRoutingModule,
     NoopAnimationsModule,
+    HttpClientModule,
     NbThemeModule.forRoot({ name: 'dark' }),
     NbCardModule,
     NbLayoutModule,
