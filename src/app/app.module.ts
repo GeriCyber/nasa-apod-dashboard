@@ -6,10 +6,14 @@ import { AppComponent } from './app.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { NbThemeModule, NbLayoutModule, NbCardModule } from '@nebular/theme';
 import { NbEvaIconsModule } from '@nebular/eva-icons';
+import { DashboardComponent, DetailComponent } from './pages';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DashboardComponent,
+    DetailComponent
   ],
   imports: [
     BrowserModule,
@@ -18,7 +22,8 @@ import { NbEvaIconsModule } from '@nebular/eva-icons';
     NbThemeModule.forRoot({ name: 'dark' }),
     NbCardModule,
     NbLayoutModule,
-    NbEvaIconsModule
+    NbEvaIconsModule,
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]
