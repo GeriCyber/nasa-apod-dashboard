@@ -1,3 +1,24 @@
-<p>
-  detail works!
-</p>
+<div fxLayout="row" 
+     fxLayout.lt-md="column"
+     fxLayoutGap="30px"
+     class="mb-20">
+  <div fxFlex="50%">
+    <img width="100%" 
+         [src]="data.media_type === mediaType.image ? 
+               data.url : 'assets/images/nasa.png'">
+  </div>
+  <div fxFlex="50%" 
+       fxFlexAlign="center">
+    <h5>{{data.title}}</h5>
+    <p>{{data.explanation}}</p>
+    <button nbButton 
+            shape="round" 
+            hero 
+            size="small" 
+            status="primary"
+            (click)="goBack()">
+        <nb-icon icon="arrow-back-outline"></nb-icon>
+        Go Back
+      </button>
+  </div>
+</div>

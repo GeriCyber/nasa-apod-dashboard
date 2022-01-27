@@ -1,9 +1,21 @@
 ::ng-deep {
     .nb-theme-dark {
+        nb-layout-column {
+            display: flex;
+            align-items: center;
+        }
         nb-layout-header {
             nav {
                 justify-content: center !important;
             }
         }
+        nb-layout-footer {
+            a {
+                text-decoration: none;
+            }
+        }
+    }
+    app-detail {
+        width: 100%;
     }
 }

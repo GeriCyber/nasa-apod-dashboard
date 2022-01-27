@@ -1,17 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
 import { delay } from 'rxjs/operators';
-import { APOD, MediaType } from '../../models/apod.model';
+import { APODCard, MediaType } from '../../models/apod.model';
 import { NasaService } from '../../services/nasa.service';
 
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.scss'],
 })
 export class DashboardComponent implements OnInit {
   date = new Date().toISOString().slice(0, 10);
-  dateRequests: Observable<APOD>[] = [];
+  dateRequests: APODCard[] = [];
   mediaType = MediaType;
 
   constructor(private _nasa: NasaService) {}
@@ -26,7 +24,12 @@ export class DashboardComponent implements OnInit {
       const date = i > 0 ? new Date(today.setDate(today.getDate() - 1)) : today;
       this.dateRequests = [
         ...this.dateRequests,
-        this._nasa.getAPOD(date.toISOString().slice(0, 10)).pipe(delay(100)),
+        {
+          date: date.toISOString().slice(0, 10),
+          request: this._nasa
+            .getAPOD(date.toISOString().slice(0, 10))
+            .pipe(delay(100)),
+        },
       ];
     }
   }

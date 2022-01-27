@@ -1,3 +1,5 @@
+import { Observable } from 'rxjs';
+
 export interface APOD {
   date: string;
   explanation: string;
@@ -12,4 +14,9 @@ export interface APOD {
 export enum MediaType {
   video = 'video',
   image = 'image',
+}
+
+export interface APODCard {
+  date: string;
+  request: Observable<APOD>;
 }
