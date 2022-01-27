@@ -1,28 +1,31 @@
-/* tslint:disable:no-unused-variable */
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { By } from '@angular/platform-browser';
-import { DebugElement } from '@angular/core';
-
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
+import { RouterModule } from '@angular/router';
+import { NasaService } from '../../services/nasa.service';
 import { DashboardComponent } from './dashboard.component';
 
 describe('DashboardComponent', () => {
-  let component: DashboardComponent;
   let fixture: ComponentFixture<DashboardComponent>;
+  let component: DashboardComponent;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [ DashboardComponent ]
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        declarations: [DashboardComponent],
+        imports: [RouterModule, HttpClientTestingModule],
+        providers: [NasaService],
+      }).compileComponents();
+
+      fixture = TestBed.createComponent(DashboardComponent);
+      component = fixture.componentInstance;
+      fixture.detectChanges();
     })
-    .compileComponents();
-  }));
+  );
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(DashboardComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
-
-  it('should create', () => {
+  it('Dashboard Component Instance', () => {
+    expect(component).toBeDefined();
+    expect(component).toBeInstanceOf(DashboardComponent);
     expect(component).toBeTruthy();
+    expect(component.dateRequests.length).toBe(6);
   });
 });

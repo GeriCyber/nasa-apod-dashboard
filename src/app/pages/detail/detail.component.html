@@ -4,13 +4,13 @@
      class="mb-20">
   <div fxFlex="50%">
     <img width="100%" 
-         [src]="data.media_type === mediaType.image ? 
-               data.url : 'assets/images/nasa.png'">
+         [src]="data?.media_type === mediaType.image ? 
+               data?.url : 'assets/images/nasa.png'">
   </div>
   <div fxFlex="50%" 
        fxFlexAlign="center">
-    <h5>{{data.title}}</h5>
-    <p>{{data.explanation}}</p>
+    <h5>{{data?.title}}</h5>
+    <p>{{data?.explanation}}</p>
     <button nbButton 
             shape="round" 
             hero 

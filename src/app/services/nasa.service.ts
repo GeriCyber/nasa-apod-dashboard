@@ -10,6 +10,13 @@ import { ApiService } from './api.service';
 export class NasaService {
   constructor(private _api: ApiService) {}
 
+  /**
+   * Get the Astronomy Picture of the day from the NASA API
+   *
+   * @param {string} date
+   * @return {*}  {Observable<APOD>}
+   * @memberof NasaService
+   */
   getAPOD(date: string): Observable<APOD> {
     return this._api.get(`${environment.API_URL}${environment.API_KEY}`, date);
   }

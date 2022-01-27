@@ -16,5 +16,10 @@ export class DetailComponent {
     private _router: Router
   ) {}
 
+  /**
+   * Navigate to Dashboard
+   *
+   * @memberof DetailComponent
+   */
   goBack = () => this._router.navigate(['/']);
 }

@@ -15,6 +15,11 @@ export class DetailCardComponent {
 
   constructor(private _router: Router) {}
 
+  /**
+   * Navigate to the detail page
+   *
+   * @memberof DetailCardComponent
+   */
   goToDetail() {
     this._router.navigate(['/detail', this.date]);
   }

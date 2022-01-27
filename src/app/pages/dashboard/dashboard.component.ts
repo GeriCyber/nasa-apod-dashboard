@@ -8,7 +8,6 @@ import { NasaService } from '../../services/nasa.service';
   templateUrl: './dashboard.component.html',
 })
 export class DashboardComponent implements OnInit {
-  date = new Date().toISOString().slice(0, 10);
   dateRequests: APODCard[] = [];
   mediaType = MediaType;
 
@@ -18,6 +17,13 @@ export class DashboardComponent implements OnInit {
     this._buildDateRequests();
   }
 
+  /**
+   * Generate date requests
+   * From current date to the previous 5 days
+   *
+   * @private
+   * @memberof DashboardComponent
+   */
   private _buildDateRequests() {
     const today = new Date();
     for (let i = 0; i < 6; i++) {
