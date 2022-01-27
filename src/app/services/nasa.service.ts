@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from '../../environments/environment.prod';
+import { APOD } from '../models';
 import { ApiService } from './api.service';
 
 @Injectable({
@@ -9,7 +10,7 @@ import { ApiService } from './api.service';
 export class NasaService {
   constructor(private _api: ApiService) {}
 
-  getAPOD(date: string): Observable<any> {
+  getAPOD(date: string): Observable<APOD> {
     return this._api.get(`${environment.API_URL}${environment.API_KEY}`, date);
   }
 }

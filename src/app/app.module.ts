@@ -1,21 +1,16 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
+import { FlexLayoutModule } from '@angular/flex-layout';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { NbEvaIconsModule } from '@nebular/eva-icons';
+import { NbCardModule, NbLayoutModule, NbThemeModule } from '@nebular/theme';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-import { NbThemeModule, NbLayoutModule, NbCardModule } from '@nebular/theme';
-import { NbEvaIconsModule } from '@nebular/eva-icons';
 import { DashboardComponent, DetailComponent } from './pages';
-import { FlexLayoutModule } from '@angular/flex-layout';
-import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    DashboardComponent,
-    DetailComponent
-  ],
+  declarations: [AppComponent, DashboardComponent, DetailComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -25,9 +20,9 @@ import { HttpClientModule } from '@angular/common/http';
     NbCardModule,
     NbLayoutModule,
     NbEvaIconsModule,
-    FlexLayoutModule
+    FlexLayoutModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
