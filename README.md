@@ -8,7 +8,7 @@ Run `npm start` for a dev server. Navigate to `http://localhost:4500/`. The app 
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Run `ng build` to build the project. The build artifacts will be stored in the `docs/` directory.
 
 ## Running unit tests
 
